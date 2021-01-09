@@ -17,7 +17,8 @@ app.engine('html', require('ejs').renderFile)
 // const { resolve } = require('path')
 app.set('view engine', 'ejs')
 app.get('/', (req, res) => {
-  res.render('index.html')
+  // res.render('index.html')
+  res.send('hey')
 })
 
 app.get('/fuck', (req, res) => {
