@@ -1,4 +1,72 @@
-.pic {
-  width: 200px;
-  height: 200px;
+html,
+body {
+  height: 100%;
+  /* overflow-y: hidden; */
 }
+
+.container-fluid {
+  height: 100%;
+}
+
+.header {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 10%;
+  text-align: center;
+}
+
+.row {
+  /* background-color: black; */
+  height: 100%;
+  margin: 0px;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+  padding: 0px;
+}
+
+.pic {
+  width: 300px;
+  height: 300px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  /* background-color: purple; */
+}
+
+label {
+  font-size: 40px;
+}
+
+/*    Mobile      */
+
+@media (max-width: 765px) {
+  .container-fluid {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .header {
+    position: relative;
+    top: 3%;
+    /* background-color: red; */
+  }
+  .right {
+    flex-grow: 3;
+  }
+}
+
+/*     ///////////////////       */
