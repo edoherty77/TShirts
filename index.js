@@ -11,11 +11,12 @@ const stripe = Stripe(
 )
 
 app.use(bodyParser.json())
-app.set('views', __dirname + '/views')
-app.engine('html', require('ejs').renderFile)
+app.use(express.static(path.join(__dirname, 'public')))
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
 
 // const { resolve } = require('path')
-app.set('view engine', 'ejs')
+
 app.get('/', (req, res) => {
   // res.render('index.html')
   res.send('hey')
