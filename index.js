@@ -1,4 +1,5 @@
 const PORT = process.env.PORT || 3000
+const path = require('path')
 require('dotenv').config({ path: './.env' })
 const express = require('express')
 
@@ -12,15 +13,15 @@ const stripe = Stripe(
 )
 
 app.use(bodyParser.json())
-app.use(express.static(path.join(__dirname, 'public')))
+// app.use(express.static(path.join(__dirname, 'public')))
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 // const { resolve } = require('path')
 
 app.get('/', (req, res) => {
-  // res.render('index.html')
-  res.send('hey')
+  res.render('index')
+  // res.send('hey')
 })
 
 app.get('/fuck', (req, res) => {
