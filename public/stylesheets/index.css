@@ -137,7 +137,7 @@ body {
   .row {
     height: 90%;
     border: none;
-    width: 95%;
+    width: 99%;
   }
 
   .pic {
@@ -148,13 +148,19 @@ body {
     /* background-color: red; */
     height: 40%;
   }
-
+  #ul {
+    /* justify-content: space-around; */
+  }
   .li {
-    padding: 10px;
+    padding: 10px 0 0 0;
+
+    /* justify-content: space-around; */
   }
 
   .checkout-div {
     margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
