@@ -44,6 +44,7 @@ body {
   justify-content: flex-start;
   padding-left: 0px;
   padding: 0 !important;
+  background-color: white;
 }
 
 .pic {
