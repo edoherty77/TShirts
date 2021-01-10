@@ -24,6 +24,7 @@ body {
   z-index: 1;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 55px;
 }
 
 .row {
@@ -136,6 +137,7 @@ body {
   .row {
     height: 90%;
     border: none;
+    width: 95%;
   }
 
   .pic {
