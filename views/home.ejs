@@ -4,53 +4,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Fraud2020</title>
   <link rel="stylesheet" href="/stylesheets/index.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
   <script src="https://js.stripe.com/v3/"></script>
 </head>
 
 <body>
   <div class='container-fluid'>
+    <h1 id='header'>Some Header</h1>
     <div class='row'>
-      <div class='col-xs-12 header'>
-        <h1>Some Header</h1>
-      </div>
 
       <div class='col-xs-12 col-md-6 left'>
-        <img class='pic' src="/images/pic.JPG" alt="">
-      </div>
-
-      <div class='col-xs-12 col-md-6 right'>
-        <div>
-          <div>
-            <label for="size">Choose a size:</label>
-            <select name="size" id="size">
-              <option value="medium">Medium</option>
-              <option value="small">Small</option>
-              <option value="large">Large</option>
-              <option value="xs">Extra Large</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="quantity">Choose an amount:</label>
-            <select name="quantity" id="quantity">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-          <div>
-
-            <button id='checkout-button'>Checkout</button>
-          </div>
-          <!-- </form> -->
+        <div id='pic-div'>
+          <img class='pic' src="/images/pic.JPG" alt="">
         </div>
       </div>
 
+      <div class='col-xs-12 col-md-6 right'>
+        <ul id='ul'>
+          <li class='li first' id='1'>
+            <div id='selection-row'>
+              <div>
+                <select name="quantity" id="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+
+              <div>
+                <select name="product" id="product">
+                  <option value="shirt">T-Shirt</option>
+                  <option value="hoodie">Hoodie</option>
+                </select>
+              </div>
+
+              <div>
+                <select name="size" id="size">
+                  <option value="medium">Medium</option>
+                  <option value="small">Small</option>
+                  <option value="large">Large</option>
+                  <option value="xs">Extra Large</option>
+                </select>
+              </div>
+              <div class='icon-div'>
+                <!-- <button id='add-button'> -->
+                <i id='add-button' class="material-icons">add</i>
+                <!-- </button> -->
+                <!-- <button id='minus-button'> -->
+                <i id='minus-button' class="material-icons">remove</i>
+                <!-- </button> -->
+              </div>
+
+            </div>
+          </li>
+        </ul>
+        <div class='checkout-div'>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            id='checkout-button'>Checkout</button>
+        </div>
+      </div>
     </div>
+
 
   </div>
 
