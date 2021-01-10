@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: blue; */
+  background-color: #e7f5f7;
 }
 
 #header {
@@ -56,7 +56,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: purple; */
+  background-color: white;
 }
 
 #ul {
@@ -101,13 +101,14 @@ body {
 #add-button,
 #minus-button {
   transition: color ease 0.5s;
+  font-size: 35px;
 }
 
 #add-button:hover,
 #minus-button:hover {
   cursor: pointer;
-  /* font-size: 30px; */
-  color: red;
+
+  color: #17a2b8;
 }
 
 .checkout-div {
