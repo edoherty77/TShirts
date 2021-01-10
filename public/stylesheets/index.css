@@ -59,6 +59,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: white;
+  /* background-color: red; */
 }
 
 #ul {
@@ -75,29 +76,11 @@ body {
 .li {
   display: flex;
   flex-direction: row;
-  /* background-color: red; */
-  width: 100%;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 20px;
-}
-
-#selection-row,
-.more {
-  display: flex;
-  flex-direction: row;
   /* background-color: blue; */
   width: 100%;
   justify-content: space-around;
   align-items: center;
-}
-
-.first > #selection-row > .icon-div > #minus-button {
-  display: none;
-}
-
-.more > .icon-div > #add-button {
-  display: none;
+  padding: 20px;
 }
 
 #add-button,
@@ -109,12 +92,26 @@ body {
 #add-button:hover,
 #minus-button:hover {
   cursor: pointer;
-
   color: #17a2b8;
 }
 
 .checkout-div {
+  position: relative;
   margin-bottom: 15px;
+  width: 100%;
+  /* background-color: red; */
+  text-align: center;
+}
+#checkout-button {
+  position: relative;
+}
+
+#add-button {
+  position: absolute;
+  bottom: 30;
+  left: 40;
+  right: 0;
+  /* background-color: green; */
 }
 
 /*    Mobile      */

@@ -23,33 +23,34 @@ app.get('/', (req, res) => {
 })
 
 app.post('/create-checkout-session', async (req, res) => {
-  const data = req.body.details
-  const size = data.size
-  const quantity = data.quantity
-  const session = await stripe.checkout.sessions.create({
-    billing_address_collection: 'auto',
-    shipping_address_collection: {
-      allowed_countries: ['US', 'CA'],
-    },
-    payment_method_types: ['card'],
-    line_items: [
-      {
-        description: size,
-        price_data: {
-          currency: 'usd',
-          product_data: {
-            name: 'T-shirt',
-          },
-          unit_amount: 8000,
-        },
-        quantity: quantity,
-      },
-    ],
-    mode: 'payment',
-    success_url: 'https://example.com/success',
-    cancel_url: 'https://example.com/cancel',
-  })
-  res.json({ id: session.id })
+  console.log(req.body)
+  // const data = req.body.details
+  // const size = data.size
+  // const quantity = data.quantity
+  // const session = await stripe.checkout.sessions.create({
+  //   billing_address_collection: 'auto',
+  //   shipping_address_collection: {
+  //     allowed_countries: ['US', 'CA'],
+  //   },
+  //   payment_method_types: ['card'],
+  //   line_items: [
+  //     {
+  //       description: size,
+  //       price_data: {
+  //         currency: 'usd',
+  //         product_data: {
+  //           name: 'T-shirt',
+  //         },
+  //         unit_amount: 8000,
+  //       },
+  //       quantity: quantity,
+  //     },
+  //   ],
+  //   mode: 'payment',
+  //   success_url: 'https://example.com/success',
+  //   cancel_url: 'https://example.com/cancel',
+  // })
+  // res.json({ id: session.id })
 })
 
 const fulfillOrder = (data) => {
