@@ -2,6 +2,7 @@ html,
 body {
   height: 100%;
   /* overflow-y: hidden; */
+  background-color: #e7f5f7;
 }
 
 .container-fluid {
