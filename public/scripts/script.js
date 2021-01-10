@@ -1,7 +1,3 @@
-// Create an instance of the Stripe object with your publishable API key
-var stripe = Stripe(
-  'pk_test_51I7XskGD6wn1FE2sFBOYFDTjEDELj9w1QsgWwPqyJNmQJF1S2GTP9etucoaBhUxYk0Y0g2tibWxDFfn8IMoWQl7K00Uqua01Dg',
-)
 var checkoutButton = document.getElementById('checkout-button')
 var list = document.getElementById('ul')
 var addBtn = document.getElementById('add-button')
@@ -10,16 +6,21 @@ let num = 1
 var quantity = document.getElementById('quantity')
 var row = document.getElementById('selection-row')
 
+//Stripe publishing key
+var stripe = Stripe(
+  'pk_test_51I7XskGD6wn1FE2sFBOYFDTjEDELj9w1QsgWwPqyJNmQJF1S2GTP9etucoaBhUxYk0Y0g2tibWxDFfn8IMoWQl7K00Uqua01Dg',
+)
+
 addBtn.addEventListener('click', function () {
   num = num + 1
   let newLi = document.createElement('li')
   newLi.innerHTML = row.innerHTML
   newLi.classList.add('more', 'li')
-  // newLi.setAttribute('class', 'more')
   newLi.setAttribute('id', num)
-  // newLi.append(row)
-  // newLi.append(li)
   list.append(newLi)
+  for (let i = 0; i < list.length; i++) {
+    console.log(list.length)
+  }
 })
 
 checkoutButton.addEventListener('click', function () {

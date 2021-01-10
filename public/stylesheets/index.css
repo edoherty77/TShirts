@@ -135,6 +135,7 @@ body {
   .left {
     justify-content: center;
     height: 60%;
+    background-color: white;
   }
 
   .row {
