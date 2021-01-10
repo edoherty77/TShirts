@@ -1,6 +1,7 @@
 var checkoutButton = document.getElementById('checkout-button')
 var list = document.getElementById('ul')
 var addBtn = document.getElementById('add-button')
+// var deleteBtn = document.getElementById('minus-button')
 var size = document.getElementById('size')
 let num = 1
 var quantity = document.getElementById('quantity')
@@ -11,6 +12,7 @@ var stripe = Stripe(
   'pk_test_51I7XskGD6wn1FE2sFBOYFDTjEDELj9w1QsgWwPqyJNmQJF1S2GTP9etucoaBhUxYk0Y0g2tibWxDFfn8IMoWQl7K00Uqua01Dg',
 )
 
+//Adds another field to the list of orders
 addBtn.addEventListener('click', function () {
   num = num + 1
   let newLi = document.createElement('li')
@@ -18,10 +20,16 @@ addBtn.addEventListener('click', function () {
   newLi.classList.add('more', 'li')
   newLi.setAttribute('id', num)
   list.append(newLi)
-  for (let i = 0; i < list.length; i++) {
-    console.log(list.length)
-  }
+  let deleteBtn = newLi.children[3].children[1]
+  console.log(deleteBtn)
+  deleteBtn.setAttribute('onClick', 'removeOrder("' + num + '")')
 })
+
+//Removes chosen order from the list
+function removeOrder(itemid) {
+  var item = document.getElementById(itemid)
+  list.removeChild(item)
+}
 
 checkoutButton.addEventListener('click', function () {
   let details = {
